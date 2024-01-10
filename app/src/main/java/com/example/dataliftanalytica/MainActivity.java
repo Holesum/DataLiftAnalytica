@@ -1,15 +1,11 @@
 package com.example.dataliftanalytica;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private dbHandler dbHandler;
+    private DBHandler dbHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         // creating a new dbhandler class
         // and passing our context to it.
-        //dbHandler = new dbHandler(MainActivity.this);
+        dbHandler = new DBHandler(MainActivity.this);
         /*// initializing all our variables.
         courseNameEdt = findViewById(R.id.idEdtCourseName);
         courseTracksEdt = findViewById(R.id.idEdtCourseTracks);
